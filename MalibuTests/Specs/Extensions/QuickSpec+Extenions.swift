@@ -1,4 +1,5 @@
 @testable import Malibu
+import Foundation
 import Quick
 
 extension QuickSpec {
