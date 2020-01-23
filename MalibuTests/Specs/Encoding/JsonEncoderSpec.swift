@@ -19,11 +19,8 @@ final class JsonEncoderSpec: QuickSpec {
             withJSONObject: parameters,
             options: JSONSerialization.WritingOptions()
           )
-          guard let encodedParameters = try! encoder.encode(parameters: parameters) else {
-            fail()
-            return
-          }
-          expect{ encodedParameters }.to(equal(data))
+
+          expect{ try encoder.encode(parameters: parameters)! }.to(equal(data))
         }
       }
     }

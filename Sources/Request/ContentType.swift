@@ -76,7 +76,7 @@ public enum ContentType {
 
 extension ContentType: Hashable {
   public func hash(into hasher: inout Hasher) {
-    hasher.combine(header ?? "query")
+    hasher.combine(header)
   }
 }
 
