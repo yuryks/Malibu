@@ -39,11 +39,11 @@
       },
       {
         "package": "When",
-        "repositoryURL": "https://github.com/yuryks/When.git",
+        "repositoryURL": "https://github.com/vadymmarkov/When.git",
         "state": {
           "branch": null,
-          "revision": "f3253b59ab6b20ad88eb5ce96c9ab81f266b2567",
-          "version": "4.0.1"
+          "revision": "f1a9b4cb4c04a29af47c3ae430a06370f99afd9d",
+          "version": "5.0.0"
         }
       }
     ]
