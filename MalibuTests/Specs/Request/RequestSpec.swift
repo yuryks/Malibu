@@ -166,7 +166,7 @@ final class RequestSpec: QuickSpec {
           }
 
           context("upload task with data") {
-            let data = Data(bytes: [UInt8](repeating: 0, count: 10))
+            let data = Data([UInt8](repeating: 0, count: 10))
 
             beforeEach {
               request = Request.upload(data: data, to: "http:/api.loc/posts")
