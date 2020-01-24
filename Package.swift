@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "Malibu",
     platforms: [
-        .macOS(.v10_10),
+        .macOS(.v10_11),
         .iOS(.v8),
         .tvOS(.v9)
     ],
