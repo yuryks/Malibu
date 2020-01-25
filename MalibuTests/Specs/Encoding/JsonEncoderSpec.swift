@@ -20,7 +20,9 @@ final class JsonEncoderSpec: QuickSpec {
             options: JSONSerialization.WritingOptions()
           )
 
-          expect{ try encoder.encode(parameters: parameters)! }.to(equal(data))
+          expect{ try encoder.encode(parameters: parameters) }.toNot(throwError())
+          expect{ try encoder.encode(parameters: parameters) }.toNot(beNil())
+          expect{ try! encoder.encode(parameters: parameters)! }.to(equal(data))
         }
       }
     }
