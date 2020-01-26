@@ -39,7 +39,7 @@ public struct Request: Equatable {
 
 public extension Request {
 
-  public static func get(_ resource: URLStringConvertible,
+  static func get(_ resource: URLStringConvertible,
                          parameters: [String: Any] = [:],
                          headers: [String: String] = [:],
                          storePolicy: StorePolicy = .unspecified,
@@ -55,7 +55,7 @@ public extension Request {
     )
   }
 
-  public static func post(_ resource: URLStringConvertible,
+  static func post(_ resource: URLStringConvertible,
                           contentType: ContentType = .json,
                           parameters: [String: Any] = [:],
                           headers: [String: String] = [:],
@@ -72,7 +72,7 @@ public extension Request {
     )
   }
 
-  public static func put(_ resource: URLStringConvertible,
+  static func put(_ resource: URLStringConvertible,
                          contentType: ContentType = .json,
                          parameters: [String: Any] = [:],
                          headers: [String: String] = [:],
@@ -89,7 +89,7 @@ public extension Request {
     )
   }
 
-  public static func patch(_ resource: URLStringConvertible,
+  static func patch(_ resource: URLStringConvertible,
                            contentType: ContentType = .json,
                            parameters: [String: Any] = [:],
                            headers: [String: String] = [:],
@@ -106,7 +106,7 @@ public extension Request {
     )
   }
 
-  public static func delete(_ resource: URLStringConvertible,
+  static func delete(_ resource: URLStringConvertible,
                             contentType: ContentType = .query,
                             parameters: [String: Any] = [:],
                             headers: [String: String] = [:],
@@ -123,7 +123,7 @@ public extension Request {
     )
   }
 
-  public static func head(_ resource: URLStringConvertible,
+  static func head(_ resource: URLStringConvertible,
                           contentType: ContentType = .query,
                           parameters: [String: Any] = [:],
                           headers: [String: String] = [:],
@@ -140,7 +140,7 @@ public extension Request {
     )
   }
 
-  public static func upload(data: Data,
+  static func upload(data: Data,
                             to resource: URLStringConvertible,
                             method: Method = .post,
                             contentType: ContentType = .formURLEncoded,
@@ -159,7 +159,7 @@ public extension Request {
     )
   }
 
-  public static func upload(multipartParameters: [String: String],
+  static func upload(multipartParameters: [String: String],
                             to resource: URLStringConvertible,
                             method: Method = .post,
                             headers: [String: String] = [:],
