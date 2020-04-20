@@ -31,6 +31,15 @@ final class SessionOperation: AsynchronousOperation {
           self?.handleResponse?(urlRequest, data, urlResponse, error)
           self?.finish()
         }
+      case .download:
+        task = session.downloadTask(with: urlRequest) { [weak self] (fileLication, urlResponse, error) in
+            var data: Data?
+            if let fileLication = fileLication, let fileData = try? Data(contentsOf: fileLication) {
+                data = fileData
+            }
+            self?.handleResponse?(urlRequest, data, urlResponse, error)
+            self?.finish()
+        }
       }
 
       task?.resume()

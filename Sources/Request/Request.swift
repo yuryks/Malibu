@@ -6,6 +6,7 @@ public struct Request: Equatable {
   public enum Task {
     case data
     case upload(data: Data?)
+    case download
   }
   public let task: Task
   public let method: Method
