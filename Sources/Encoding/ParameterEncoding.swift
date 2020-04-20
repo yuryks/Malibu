@@ -1,5 +1,5 @@
 import Foundation
 
 public protocol ParameterEncoding {
-  func encode(parameters: [String: Any]) throws -> Data?
+  func encode(parameters: [String: Any]) throws -> Data
 }
