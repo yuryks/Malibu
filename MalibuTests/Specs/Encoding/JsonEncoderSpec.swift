@@ -15,14 +15,11 @@ final class JsonEncoderSpec: QuickSpec {
       describe("#encode:parameters") {
         it("encodes a dictionary of parameters to NSData object") {
           let parameters = ["firstname": "John", "lastname": "Doe"]
-          let data = try! JSONSerialization.data(
-            withJSONObject: parameters,
-            options: JSONSerialization.WritingOptions()
-          )
+          let data = try! JSONSerialization.data(withJSONObject: parameters)
 
           expect{ try encoder.encode(parameters: parameters) }.toNot(throwError())
           expect{ try encoder.encode(parameters: parameters) }.toNot(beNil())
-          expect{ try! encoder.encode(parameters: parameters)! }.to(equal(data))
+          expect{ try encoder.encode(parameters: parameters) }.to(equal(data))
         }
       }
     }
