@@ -23,7 +23,7 @@ final class RequestCapsuleSpec: QuickSpec {
 
       describe("#init:coder") {
         it("creates an instance") {
-          let data = NSKeyedArchiver.archivedData(withRootObject: capsule)
+          let data = NSKeyedArchiver.archivedData(withRootObject: capsule!)
           let result = NSKeyedUnarchiver.unarchiveObject(with: data) as! RequestCapsule
 
           expect(result.request).to(equal(capsule.request))
